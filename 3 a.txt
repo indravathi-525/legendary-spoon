@@ -19,13 +19,13 @@ if(strlen(c)>100)
 int i=0;
 do
     {
-        char c = fgetc(fp); 
+        char c = fgetc(fptr); 
         if (i==100) 
             break ; 
         printf("%c", c); 
 i++;
     }  while(1); 
-fclose(fp);
+fclose(fptr);
 }
 else
     printf("Data from the file:\n%s", c);
