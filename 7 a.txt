@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+   char a;
+   FILE *b;
+   if (b = fopen("t.txt", "r"))
+   {
+     a = getc(b);
+     while (a != EOF)
+     {
+        putc(a, stdout);
+        a = getc(b);
+     }
+     fclose(b);
+     return 0;
+   }
+   return 1;
+}
