@@ -14,7 +14,7 @@ int main(){
     for (i = 0; i < 10; i++){
         fscanf(myFile, "%d,", &numberArray[i] );
     }
-    for (i = 0; i < 16; i++){
+    for (i = 0; i < 10; i++){
         printf("Number is: %d\n\n", numberArray[i]);
     }
     fclose(myFile);
