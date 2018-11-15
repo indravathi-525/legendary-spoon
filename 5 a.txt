@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   char c;
+   FILE *fptr;
+   fptr = fopen("program.txt","r+");
+
+   if(fptr == NULL)
+   {
+      printf("Error!");   
+      exit(1);             
+   }
+   int i=0;
+   while(i<26)
+   {
+   scanf("%c",&c);
+   fprintf(fptr,"%c",c);
+   i++;
+   }
+   rewind(fptr);
+   while(1) {
+      char ch = fgetc(fptr);
+      if( feof(fptr) ) {
+         break ;
+      }
+      printf("%c", ch);
+     
+   }
+   fclose(fptr);
+
+   return 0;
+}
